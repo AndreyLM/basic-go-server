@@ -9,4 +9,10 @@ type DB interface {
 	Update(id int64, model interface{}) error
 	Store(model interface{}) error
 	Delete(id int64, model interface{}) error
+	Close() error
+}
+
+// Factory - creating driver through factory
+type Factory interface {
+	GetDBDriverFactory(config *ConnectionConfig) *DB
 }

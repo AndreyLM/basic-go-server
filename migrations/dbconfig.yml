@@ -1,0 +1,4 @@
+dev:
+  dialect: mysql
+  datasource: admin:admin123@tcp(localhost:4000)/basic?parseTime=true
+  dir: ./
